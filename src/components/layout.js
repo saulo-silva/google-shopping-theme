@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import Header from "./header";
+import Header from './header';
 
 function Layout({ children }) {
   return (
@@ -15,7 +15,7 @@ function Layout({ children }) {
       <footer className="bg-blue-700">
         <nav className="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8">
           <p className="text-white">
-            Created by{` `}
+            Created by{' '}
             <a
               className="font-bold no-underline"
               href="https://bryant.io"

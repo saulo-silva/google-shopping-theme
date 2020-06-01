@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import catAndHumanIllustration from '../images/cat-and-human-illustration.svg';
 
 function IndexPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={['gatsby', 'tailwind', 'react', 'tailwindcss']}
         title="Home"
       />
 
@@ -24,7 +24,7 @@ function IndexPage() {
         </h2>
 
         <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{` `}
+          This is a barebones starter for Gatsby styled using{' '}
           <a
             className="font-bold text-gray-900 no-underline"
             href="https://tailwindcss.com/"

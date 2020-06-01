@@ -1,5 +1,5 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
-import React, { useState } from "react";
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import React, { useState } from 'react';
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -49,17 +49,17 @@ function Header() {
 
         <nav
           className={`${
-            isExpanded ? `block` : `hidden`
+            isExpanded ? 'block' : 'hidden'
           } md:block md:flex md:items-center w-full md:w-auto`}
         >
           {[
             {
-              route: `/about`,
-              title: `About`,
+              route: '/about',
+              title: 'About',
             },
             {
-              route: `/contact`,
-              title: `Contact`,
+              route: '/contact',
+              title: 'Contact',
             },
           ].map((link) => (
             <Link
