@@ -1,13 +1,22 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
+import { navigate } from 'gatsby';
 
-function ProductListCard({ image, title, price, urlProduct }) {
+function ProductListCard({ image, title, price, urlProduct, openItem, isOpen }) {
+
+  const showProduct = () => {
+    navigate(`/google/${urlProduct}`, { replace: false })
+    if (!isOpen) {
+      openItem()
+    }
+  }
   return (
     <div className="w-full max-w-6xl rounded-md shadow-google border border-solid border-gray-200">
       <div className="divide-y divide-gray-400">
         <div className="p-4 ">
           <img src={image} className="max-w-full mb-2" />
-          <h4 className="h-10 text-gray-700 text-base cursor-pointer hover:underline">
+          <h4 className="h-10 text-gray-700 text-base cursor-pointer hover:underline"
+              onClick={showProduct}>
             {title}
           </h4>
         </div>
@@ -30,6 +39,8 @@ ProductListCard.propTypes = {
   price: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   urlProduct: PropTypes.string.isRequired,
+  openItem: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
 };
 
 export default ProductListCard;
